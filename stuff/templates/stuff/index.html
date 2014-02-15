@@ -1,4 +1,13 @@
 <form action="/stuff/" method="post">{% csrf_token %}
 {{ form.as_p }}
+<input type="hidden" name="sessionid" value="{{ request.session.sessionid }}">
 <input type="submit">
 </form>
+<br>
+Session value: {{ request.session.value }}
+<br>
+<br>
+Hier: {{ request.POST.sessionid }}
+<br>
+<br>
+{% debug %}
