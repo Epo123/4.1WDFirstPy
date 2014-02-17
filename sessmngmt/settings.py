@@ -80,11 +80,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+PROJECT_ROOT        = os.path.abspath(os.path.dirname(__file__))
+PROJECT_ROOT_PARENT = os.path.dirname(PROJECT_ROOT)
 
 TEMPLATE_DIRS = (
-    "C:/Users/Erik/Desktop/UniformServer/UniServer/python/sessmngmt/stuff/templates",
-    os.path.join(PROJECT_ROOT, 'templates').replace('\\', '/'),
+    os.path.join(PROJECT_ROOT_PARENT, 'stuff', 'templates').replace('\\', '/'),
 )
 
 TEMPLATE_LOADERS = (
