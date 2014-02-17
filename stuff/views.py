@@ -15,8 +15,6 @@ def index(request):
         if form.is_valid():
             value = form.cleaned_data['value']
             request.session['value'] = value
-
-            return HttpResponseRedirect('/stuff/')
     else:
         form = SmallForm()
 
